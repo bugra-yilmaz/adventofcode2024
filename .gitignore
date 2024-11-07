@@ -1,3 +1,7 @@
 .idea/
 .mypy_cache/
 venv/
+*.pyc
+*__pycache__/
+*.token
+*.egg-info/
