@@ -12,7 +12,7 @@ from urllib import error
 from urllib import parse
 from urllib import request
 
-YEAR = 2023
+YEAR = 2024
 
 INPUT_FILENAME = 'input.txt'
 TEMPLATE_DIR = Path('day00')
