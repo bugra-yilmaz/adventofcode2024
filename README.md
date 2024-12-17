@@ -6,7 +6,7 @@ https://adventofcode.com
 ```bash
 python3 -m venv venv
 source venv/bin/activate
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
 ## Start having fun
