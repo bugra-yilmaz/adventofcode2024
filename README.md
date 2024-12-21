@@ -16,4 +16,4 @@ aoc-todays-puzzle
 ```
 Then you can already start working on the template Python files to solve first and second part of the puzzle!
 
-Special thanks to my man @anthonywritescode!
+Special thanks to my man @asottile!
