@@ -50,8 +50,15 @@ def make_files(day: int, string: str) -> None:
     copy(TEMPLATE_FILEPATH, folder / PART2_FILENAME)
 
 
-def get_todays_puzzle() -> int:
-    day = datetime.date.today().day
+def get_puzzle() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--day', type=int, required=False)
+    args = parser.parse_args()
+
+    if not args.day:
+        day = datetime.date.today().day
+    else:
+        day = args.day
 
     for i in range(5):
         try:
@@ -91,15 +98,19 @@ def _post_answer(day: int, part: int, answer: int) -> str:
     return resp.read().decode()
 
 
-def submit_todays_answer() -> int:
+def submit_answer() -> int:
     parser = argparse.ArgumentParser()
+    parser.add_argument('--day', type=int, required=False)
     parser.add_argument('--part', type=int, required=True)
     args = parser.parse_args()
 
-    day = datetime.date.today().day
-    answer = int(sys.stdin.read())
+    if not args.day:
+        day = datetime.date.today().day
+    else:
+        day = args.day
 
-    print(f"answer: {answer}")
+    answer = int(sys.stdin.read())
+    print(f"Answer: {answer}")
 
     contents = _post_answer(day, args.part, answer)
 

@@ -12,7 +12,7 @@ pip install -r requirements.txt
 ## Start having fun
 Run the following to programmatically get today's puzzle
 ```bash
-aoc-todays-puzzle
+aoc-puzzle
 ```
 Then you can already start working on the template Python files to solve first and second part of the puzzle!
 
